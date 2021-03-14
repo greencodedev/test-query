@@ -37,7 +37,8 @@ function App() {
   function makeQueryArr(query) {
     var queryArr = [];
     Object.values(query).map(item => {
-      queryArr = queryArr.concat(item.split(","));
+      if (item !== "")
+        queryArr = queryArr.concat(item.split(","));
     });
     return queryArr;
   }
